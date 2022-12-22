@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NYU Campus Safety Surveliance</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--fav icon-->
+    <script
+      src="https://kit.fontawesome.com/095d67c99a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+
+    <!-- css and google fonts -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- api gateway generated sdk -->
+
+    <script src="./js/aws-sdk/lib/axios/dist/axios.standalone.js"></script>
+    <script src="./js/aws-sdk/lib/CryptoJS/rollups/hmac-sha256.js"></script>
+    <script src="./js/aws-sdk/lib/CryptoJS/rollups/sha256.js"></script>
+    <script src="./js/aws-sdk/lib/CryptoJS/components/hmac.js"></script>
+    <script src="./js/aws-sdk/lib/CryptoJS/components/enc-base64.js"></script>
+    <script src="./js/aws-sdk/lib/url-template/url-template.js"></script>
+    <script src="./js/aws-sdk/lib/apiGatewayCore/sigV4Client.js"></script>
+    <script src="./js/aws-sdk/lib/apiGatewayCore/apiGatewayClient.js"></script>
+    <script src="./js/aws-sdk/lib/apiGatewayCore/simpleHttpClient.js"></script>
+    <script src="./js/aws-sdk/lib/apiGatewayCore/utils.js"></script>
+
+    <script src="./js/aws-sdk/apigClient.js"></script>
+
+    <script src="./js/aws-sdk/aws-sdk.min.js"></script>
+  </head>
+
+  <center><header class="photos-title">NYU Campus Safety Surveliance</header></center>
+
+  <body>
+    <div class="container-fluid upload-div">
+      <h2>Upload Video</h2>
+      <form action="/action_page.php" enctype="multipart/form-data">
+        <div class="row">
+          <div class="col-3 image-text">
+            <label for="image_file"><h5>Choose Video to upload</h5></label>
+          </div>
+          <div class="col-2 image-button">
+            <input
+              type="file"
+              id="image-file"
+              name="image-file"
+              accept=".mp4"
+            />
+          </div>
+        </div>
+      </form>
+
+      <button
+        type="button"
+        class="btn btn-danger"
+        id="upload-files"
+        onclick="uploadVideo()"
+      >
+        Upload Video
+      </button>
+      <h3 id="uploadText"></h3>
+    </div>
+
+    <div>
+      <button
+        type="button"
+        class="btn btn-danger"
+        id="start-stream"
+        onclick="startStreamProcessor()"
+      >Start Live Video Processing</button>
+    </div>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
