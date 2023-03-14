@@ -7,3 +7,5 @@ action emails to concerned campus security personnel.
 ### Proposed Architecture
 This architecture relies heavily on **AWS Kinesis Video and Data streams**. As of November 2021, this product has an on-demand 
 auto-scaling feature as well which can take any amount of data, from any number of sources, and scale up and down as needed.
+
+![/assets/ProposedArchitecture.png]
