@@ -28,3 +28,5 @@ contains any weapons.
 ### Sample Outputs
 Whenever a suspicious weapon is identified or an unauthorized person is identified on the campus premises, the system sends out
 appropriate notifications to concerned security personnel to take further action.
+
+![Sample Email Output](assets/EmailSampleOutput.png)
